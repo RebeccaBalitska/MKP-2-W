@@ -1,0 +1,37 @@
+class LessonPicture {
+
+
+
+            constructor(pictures, lessons) {
+
+                this.lessons_pic = Object.assign(...lessons.map((n, i) => ({ [n]: pictures[i] })));
+
+            }
+
+
+
+            askLesson() {
+
+                let lesson = prompt("Введіть назву предмета: ");
+
+                this.drawPicture(lesson)
+
+            }
+
+
+
+            drawPicture(lesson) {
+
+                document.write(<img src="${this.lessons_pic[lesson]}">)
+
+            }
+
+
+
+        }
+
+
+
+        let test = new LessonPicture(["https://i.ytimg.com/vi/cI7-Hn246w0/maxresdefault.jpg", "https://proforientator.ru/services/proflager/st16.01.2014_5.jpg"], ["Математика", "Філософія"])
+
+        test.askLesson()
