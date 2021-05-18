@@ -1,0 +1,7 @@
+let arr = prompt("Введіть елементи через пробіл: ").split(" ")
+
+arr = arr.map(x => x * 7)
+
+
+
+console.log(arr)
